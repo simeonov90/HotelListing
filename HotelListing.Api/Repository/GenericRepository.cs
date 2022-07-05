@@ -33,12 +33,17 @@ namespace HotelListing.Api.Repository
             return entity != null;
         }
 
+        public IQueryable<T> GetAll()
+        {
+            return context.Set<T>();
+        }
+
         public async Task<List<T>> GetAllAsync()
         {
             return await context.Set<T>().ToListAsync();
         }
 
-        public async Task<T> GetAsync(int id) => await context.Set<T>().FindAsync();
+        public async Task<T> GetAsync(int id) => await context.Set<T>().FindAsync(id);
 
         public async Task UpdateAsync(T entity)
         {

@@ -31,9 +31,35 @@ namespace HotelListing.Api.Data
                 },
                 new Country
                 {
-                    Id = 1,
+                    Id = 3,
                     Name = "Cayman Island",
                     ShortName = "CI"
+                }
+            );
+            modelBuilder.Entity<Hotel>().HasData(
+                new Hotel
+                {
+                    Id = 1,
+                    Name = "JaHotel",
+                    Address = "Jamaica Street",
+                    Rating = 5,
+                    CountryId = 1
+                },
+                new Hotel
+                {
+                    Id = 2,
+                    Name = "BaHotel",
+                    Address = "Bahams Street",
+                    Rating = 5,
+                    CountryId = 2
+                },
+                new Hotel
+                {
+                    Id = 3,
+                    Name = "CaymanHotel",
+                    Address = "Cayman Street",
+                    Rating = 5,
+                    CountryId = 3
                 }
             );
         }

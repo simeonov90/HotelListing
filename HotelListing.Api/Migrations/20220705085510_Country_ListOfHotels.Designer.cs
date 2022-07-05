@@ -3,6 +3,7 @@ using HotelListing.Api.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HotelListing.Api.Migrations
 {
     [DbContext(typeof(HotelListingDbContext))]
-    partial class HotelListingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220705085510_Country_ListOfHotels")]
+    partial class Country_ListOfHotels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,27 +41,7 @@ namespace HotelListing.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Countries", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Jamaica",
-                            ShortName = "JM"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Bahams",
-                            ShortName = "BS"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Cayman Island",
-                            ShortName = "CI"
-                        });
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("HotelListing.Api.Data.Models.Hotel", b =>
@@ -88,33 +70,7 @@ namespace HotelListing.Api.Migrations
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("Hotels", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Address = "Jamaica Street",
-                            CountryId = 1,
-                            Name = "JaHotel",
-                            Rating = 5.0
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Address = "Bahams Street",
-                            CountryId = 2,
-                            Name = "BaHotel",
-                            Rating = 5.0
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Address = "Cayman Street",
-                            CountryId = 3,
-                            Name = "CaymanHotel",
-                            Rating = 5.0
-                        });
+                    b.ToTable("Hotels");
                 });
 
             modelBuilder.Entity("HotelListing.Api.Data.Models.Hotel", b =>
