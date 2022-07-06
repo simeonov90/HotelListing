@@ -25,7 +25,7 @@ namespace HotelListing.Api.Controllers
         public async Task<ActionResult> Register([FromBody] CreateHotelUserDto createHotelUserDto)
         {
             var errors = await authManager.Register(createHotelUserDto);
-
+            
             if (errors.Any())
             {
                 foreach (var error in errors)
@@ -36,6 +36,24 @@ namespace HotelListing.Api.Controllers
             }
 
             return Ok(createHotelUserDto);
+        }
+
+        // POST: api/Account/register
+        [HttpPost]
+        [Route("login")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult> Login([FromBody] LoginDto loginDto)
+        {
+            var isValidUser = await authManager.Login(loginDto);
+
+            if (!isValidUser)
+            {
+                return Unauthorized();
+            }
+
+            return Ok();
         }
     }
 }
