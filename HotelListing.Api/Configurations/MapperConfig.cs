@@ -2,6 +2,7 @@
 using HotelListing.Api.Data.Models;
 using HotelListing.Api.Models.Country;
 using HotelListing.Api.Models.Hotel;
+using HotelListing.Api.Models.HotelUser;
 
 namespace HotelListing.Api.Configurations
 {
@@ -15,6 +16,7 @@ namespace HotelListing.Api.Configurations
             CreateMap<UpdateCountryDto, Country>();
             CreateMap<CreateCountryDto, Country>();
             CreateMap<Country, CountryDto>();
+            CreateMap<CreateHotelUserDto, HotelUser>();
         }
     }
 }

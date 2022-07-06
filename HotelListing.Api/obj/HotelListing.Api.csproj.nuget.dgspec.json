@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SoftUni\\HotelListing\\HotelListing.Api\\HotelListing.Api.csproj": {}
+    "C:\\Users\\ACER\\Source\\Repos\\HotelListing\\HotelListing.Api\\HotelListing.Api.csproj": {}
   },
   "projects": {
-    "D:\\SoftUni\\HotelListing\\HotelListing.Api\\HotelListing.Api.csproj": {
+    "C:\\Users\\ACER\\Source\\Repos\\HotelListing\\HotelListing.Api\\HotelListing.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SoftUni\\HotelListing\\HotelListing.Api\\HotelListing.Api.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Source\\Repos\\HotelListing\\HotelListing.Api\\HotelListing.Api.csproj",
         "projectName": "HotelListing.Api",
-        "projectPath": "D:\\SoftUni\\HotelListing\\HotelListing.Api\\HotelListing.Api.csproj",
-        "packagesPath": "C:\\Users\\HOME\\.nuget\\packages\\",
-        "outputPath": "D:\\SoftUni\\HotelListing\\HotelListing.Api\\obj\\",
+        "projectPath": "C:\\Users\\ACER\\Source\\Repos\\HotelListing\\HotelListing.Api\\HotelListing.Api.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\Source\\Repos\\HotelListing\\HotelListing.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HOME\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +43,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -93,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
