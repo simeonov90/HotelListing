@@ -6,6 +6,6 @@ namespace HotelListing.Api.Contracts
     public interface IAuthManager
     {
         Task<IEnumerable<IdentityError>> Register(CreateHotelUserDto createHotelUserDto);
-        Task<bool> Login(LoginDto login);
+        Task<AuthResponseDto> Login(LoginDto login);
     }
 }

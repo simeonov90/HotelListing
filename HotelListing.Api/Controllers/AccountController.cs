@@ -1,6 +1,5 @@
 ﻿using HotelListing.Api.Contracts;
 using HotelListing.Api.Models.HotelUser;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelListing.Api.Controllers
@@ -46,14 +45,11 @@ namespace HotelListing.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult> Login([FromBody] LoginDto loginDto)
         {
-            var isValidUser = await authManager.Login(loginDto);
+            var authResponse = await authManager.Login(loginDto);
 
-            if (!isValidUser)
-            {
-                return Unauthorized();
-            }
-
-            return Ok();
+            if (authResponse is null) return Unauthorized();
+            
+            return Ok(authResponse);
         }
     }
 }
